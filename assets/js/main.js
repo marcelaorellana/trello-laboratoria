@@ -62,6 +62,16 @@ accion.addEventListener("click", function(){
 				document.getElementById("listaTareas").insertBefore(nuevaCard, document.getElementById("listaTareas").lastChild);
 				document.getElementById('addCardButton').value = "";
 			});
+			document.getElementById('addCardButton').addEventListener('keypress',function(e){
+				if (e.keyCode === 13){
+				var nuevaCard = document.createElement("p");
+				var valorTarea = document.getElementById('addCardButton').value;
+				var textoNuevaCard = document.createTextNode(valorTarea);
+				nuevaCard.appendChild(textoNuevaCard);
+				document.getElementById("listaTareas").insertBefore(nuevaCard, document.getElementById("listaTareas").lastChild);
+				document.getElementById('addCardButton').value = "";
+				}
+			});
 
 
 		});
