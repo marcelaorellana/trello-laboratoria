@@ -3,13 +3,14 @@
 var accion = document.getElementById("linkList");
 
 accion.addEventListener("click", function(){
-	
+	//agrega el input y botón para título de la lista
 	var cont = document.getElementById("addTareas");
 	var inputLista = document.createElement("input");
 		inputLista.id = "inputListaId";
 		inputLista.placeholder = "add a list..."
 	var nuevasTareas = document.createElement("button");
 		nuevasTareas.id = "guardar";
+		nuevasTareas.class = "button";
 	var textoNuevaTarea = document.createTextNode("Save");
 	document.getElementById("linkList").parentNode.removeChild(document.getElementById("linkList"));	
 	nuevasTareas.appendChild(textoNuevaTarea);	
@@ -47,7 +48,8 @@ accion.addEventListener("click", function(){
 				tarjeta.setAttribute('id', 'divListaId');
 			var botonLista = document.createElement("button");
 				tarjeta.setAttribute('id', 'addCardButton');
-			var textoBoton = document.createTextNode("guardar");
+				tarjeta.setAttribute('class', "button");
+			var textoBoton = document.createTextNode("Add");
 			botonLista.appendChild(textoBoton);
 			divLista.appendChild(botonLista);
 			document.getElementById("addList").appendChild(divLista);
@@ -57,7 +59,7 @@ accion.addEventListener("click", function(){
 				var valorTarea = document.getElementById('addCardButton').value;
 				var textoNuevaCard = document.createTextNode(valorTarea);
 				nuevaCard.appendChild(textoNuevaCard);
-				document.getElementById("listaTareas").insertBefore(nuevaCard, document.getElementById("listaTareas").firstChild);
+				document.getElementById("listaTareas").insertBefore(nuevaCard, document.getElementById("listaTareas").lastChild);
 				document.getElementById('addCardButton').value = "";
 			});
 

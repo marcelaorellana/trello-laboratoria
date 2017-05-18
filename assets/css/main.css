@@ -7,4 +7,32 @@ a{
 }
 h2{
 	margin-top:  1px;
+	color: #0875A8;
+}
+#addList{
+	background-color: #EFDEA9;
+	width: 30%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+p{
+	color: #0875A8;
+	background-color: whitesmoke;
+}
+button {
+    background-color: #0875A8; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+input{
+	width: 100%;
+	padding-bottom: 12px;
+	display: inline-block;
+	box-sizing: border-box;
+	border: 1px solid #0875A8;
 }
